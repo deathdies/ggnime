@@ -12,9 +12,9 @@ const {
 } = require("./grabber");
 
 router.get("/", function (req, res) {
-  res.json({
+  res.end(JSON.stringify({
      message: "😍 GG Nime Server => 1 is Ready! 🚀",
-  });
+  }, null, 1));
 });
 router.get("/search", getSearchAnime);
 router.get("/recent", getRecentRelease);
