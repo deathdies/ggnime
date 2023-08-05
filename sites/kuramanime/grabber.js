@@ -35,7 +35,7 @@ const getOngoingAnime = async (req, res) => {
         })
       );
 
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         status: "success",
         statusCode: 200,
         page: req.query.page || 1,
@@ -100,7 +100,7 @@ const getScheeduleAnime = async (req, res) => {
         })
       );
 
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         status: "success",
         statusCode: 200,
         page: req.query.page || "1",
@@ -142,7 +142,7 @@ const getPropertiesAnime = async (req, res) => {
         })
       );
 
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         status: "success",
         statusCode: 200,
         properties: req.query.genre_type || "genre",
@@ -194,7 +194,7 @@ const getPropertiesGenre = async (req, res) => {
         })
       );
 
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         status: "success",
         statusCode: 200,
         genreName: req.params.genreName,
@@ -375,7 +375,7 @@ const getDetailsAnime = async (req, res) => {
         })
       );
 
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         status: "success",
         statusCode: 200,
         genreName: req.params.genreName,
@@ -430,7 +430,7 @@ const getSearchAnime = async (req, res) => {
         })
       );
 
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         status: "success",
         statusCode: 200,
         genreName: req.params.genreName,
@@ -484,7 +484,7 @@ const getRecentRelease = async (req, res) => {
         })
       );
 
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         status: "success",
         statusCode: 200,
         genreName: req.params.genreName,
@@ -536,7 +536,7 @@ const getAnimeEpisode = (req, res) => {
         });
       });
 
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         statusbar: "success",
         data: datas,
         isActive: $("#animeEpisodes > a.active-ep.ep-button").attr("class"),
@@ -547,7 +547,7 @@ const getAnimeEpisode = (req, res) => {
       }, null, 1));
     })
     .catch((error) => {
-      res.send(JSON.stringify({
+      res.end(JSON.stringify({
         statusbar: "error",
         message: error.message,
       }, null, 1));
